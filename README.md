@@ -174,6 +174,8 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
   `WEEK` :  enter the week wanted, can be `*` for all folders
 
   `MONTH-DAY` :  enter the month-day wanted, can be `*` for all folders
+  
+  `DATE` :  enter the date wanted in format : "2022-4-26 16:45" 
 
   `FILENAME` : enter the name of the file in the following format:
   - For the hourly files: `hourlyResult`_`YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
