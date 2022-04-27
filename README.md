@@ -211,16 +211,17 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_stock_infos.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_infos.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]  --minDate=[DATE] --maxDate=[DATE] --stockName=[NAME]
     ```
    - E.G :
-     - Create a Weekly file of daily values:
+     - Take all daily files and give informations about acciona between 9:30 and 19:40 on 21/04/2022:
        ```sh
-       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_infos.py ../outputs/*/*/*/dailyResult_*  --minDate="2022-04-21 09:30" --maxDate="2022-04-21 19:40" --stockName="acciona"
+
        ```
-     - Create a Month file of weekly values:
+     - Take all daily files in the week 17 and give informations about SOLARIA between 2022/04/25 9:30 and 2022/04/29 14:10 :
         ```sh
-        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
+        python project_stock_infos.py ../outputs/*/*/17/dailyResult_*  --minDate="2022-04-21 09:30" --maxDate="2022-04-21 19:40" --stockName="SOLARIA"
         ```
 
 * project_stock_history.py
@@ -231,11 +232,11 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
    - E.G :
      - Create a Weekly file of daily values:
        ```sh
-       python project_stock_history.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_history.py ../outputs/2022/*/*/dailyResult_* --stockName="acciona"
        ```
      - Create a Month file of weekly values:
         ```sh
-        python project_stock_history.py ../outputs/2022/*/4-*/dailyResult_*
+       python project_stock_history.py ../outputs/*/*/*/dailyResult_* --stockName="acciona"
         ```
 
 * project_stock_increase.py
