@@ -185,6 +185,7 @@ These scripts use the parameters of the `project_stock_[SCRIPTNAME].py` scripts 
 ```sh
 python project_main.py
 ```
+This allows to launch the scrapper, the creation of the daily, weekly and monthly files and to send them in the HDFS if it is 18:30
 * project_stock_list.py
   - Command:
     ```sh
