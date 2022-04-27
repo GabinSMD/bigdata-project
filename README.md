@@ -74,7 +74,7 @@ The aim of this project is to retrieve shares from the stock exchange every hour
 
 The collected data will then be processed according to the [Roadmap](#roadmap)
 
-This project was realized during the BigData course at the Polytechnic University of Valencia by : 
+This project was realized during the BigData course at the Polytechnic University of Valencia
 
 
 ### Contributors 
@@ -144,9 +144,7 @@ python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[DAY]/hourlyResult_[FILENA
 
 `DAY` :  enter the day wanted, can be `*` for all folder
 
-`FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR` but any part or all part can be replace by `*`
-
-`HOUR` :  enter the hour wanted, can be `*` for all file
+`FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
 
 
 * project_stock_infos.py
