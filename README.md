@@ -216,7 +216,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
    - E.G :
      - Give informations about acciona between 9:30 and 19:40 on 21/04/2022:
        ```sh
-       python project_stock_infos.py ../outputs/*/*/*/dailyResult_*  --minDate="2022-04-21 09:30" --maxDate="2022-04-21 19:40" --stockName="acciona"
+       python project_stock_infos.py ../outputs/2022/*/*/dailyResult_*  --minDate="2022-04-21 09:30" --maxDate="2022-04-21 19:40" --stockName="acciona"
        ```
 
 * project_stock_history.py
@@ -227,7 +227,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
    - E.G :
      - Give the minimal and the maximal value of SOLARIA of the last hour, last week and the last month:
        ```sh
-       python project_stock_history.py ../outputs/*/*/*/dailyResult_* --stockName="SOLARIA"
+       python project_stock_history.py ../outputs/2022/*/*/dailyResult_* --stockName="SOLARIA"
        ```
 
 * project_stock_increase.py
@@ -238,7 +238,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
    - E.G :
      - Display the 5 stocks that have risen the most in the last week and month :
        ```sh
-       python project_stock_increase.py ../outputs/*/*/*/dailyResult_* 
+       python project_stock_increase.py ../outputs/2022/*/*/dailyResult_* 
        ```
        
 * project_stock_decrease.py
@@ -249,7 +249,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
    - E.G :
      - Display the 5 stocks that have declined the most in the last week and month:
        ```sh
-       python project_stock_decrease.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_decrease.py ../outputs/2022/*/*/dailyResult_*
        ```
         
 * project_stock_evolution.py
@@ -273,7 +273,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
    - E.G :
      - Take the names of the stock in todayTOP5 and display informations of these stock between 16/04/2022 9:00 and 26/04/2022 15:00
        ```sh
-       python project_top_history.py ../outputs/todayTOP5 ../outputs/*/*/*/dailyResult_* --minDate="2022-4-16 9:00" --maxDate="2022-4-26 15:00"
+       python project_top_history.py ../outputs/todayTOP5 ../outputs/2022/*/*/dailyResult_* --minDate="2022-4-16 9:00" --maxDate="2022-4-26 15:00"
        ```
        
 * project_top_date.py
