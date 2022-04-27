@@ -172,6 +172,9 @@ python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult
 `MONTH-DAY` :  enter the month-day wanted, can be `*` for all folder
 
 `FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
+ 
+ - E.G :
+  
 
 
 * project_stock_infos.py
