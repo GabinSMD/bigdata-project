@@ -282,17 +282,14 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_top_date.py
   - Command:
     ```sh
-    python project_top_date.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_top_date.py ../outputs/todayTOP5 ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --searchDate="[DATE]"
     ```
    - E.G :
-     - Create a Weekly file of daily values:
+     - Get the value of the Top 5 at a precise date:
        ```sh
-       python project_top_date.py ../outputs/2022/17/*/dailyResult_*
+       python project_top_date.py ../outputs/todayTOP5 ../outputs/2022/*/*/dailyResult_* --searchDate="2022-4-26 9:00"
        ```
-     - Create a Month file of weekly values:
-        ```sh
-        python project_top_date.py ../outputs/2022/*/4-*/dailyResult_*
-        ```  
+      
 * project_top_evolution.py
   - Command:
     ```sh
