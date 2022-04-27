@@ -170,7 +170,9 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
   `MONTH-DAY` :  enter the month-day wanted, can be `*` for all folders
 
-  `FILENAME` : enter the name of the file, `hourlyResult/dailyResult`_`YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
+  `FILENAME` : enter the name of the file in the following format:
+  - For the hourly files: `hourlyResult`_`YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
+  - For the daily files: `dailyResult`_`YEAR`-`WEEK`-`DAY` but any part or all part can be replace by `*`
   
 * For `project_top_[SCRIPTNAME].py` scripts:
 
