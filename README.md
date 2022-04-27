@@ -45,7 +45,9 @@
     Deployement Project
     <br />
     
-    <!--<a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>-->
+    <!--
+     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    -->
     <br />
     <br />
   
