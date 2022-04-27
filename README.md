@@ -176,13 +176,13 @@ python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[DAY]/hourlyResult_[FILENA
 
 * project_stock_infos.py
 ```sh
-python project_stock_infos.py ../outputs/[YEAR]/[WEEK]/[DAY]/dailyResult_[FILENAME]  --minDate=[DATE] --maxDate=[DATE] --stockName=[NAME]
+python project_stock_infos.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]  --minDate=[DATE] --maxDate=[DATE] --stockName=[NAME]
 ```
 `YEAR` : enter the year wanted, can be `*` for all folder
 
 `WEEK` :  enter the week wanted, can be `*` for all folder
 
-`DAY` :  enter the day wanted, can be `*` for all folder
+`MONTH-DAY` :  enter the month-day wanted, can be `*` for all folder
 
 `FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY` but any part or all part can be replace by `*`
 
