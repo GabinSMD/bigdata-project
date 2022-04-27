@@ -11,7 +11,10 @@ nowWeek = datetime.today().isocalendar()[1]
 
 if nowHour ==9:
   nowHour = "09"
-
+  
+if nowDay < 10:
+  nowDay = "0"+str(nowDay)
+  
 fileHourly = 'hourlyResult_'+str(nowYear)+'-'+str(nowMonth)+'-'+str(nowDay)+'-'+str(nowHour)+'h'
 fileDaily = 'dailyResult_'+str(nowYear)+'-'+str(nowMonth)+'-'+str(nowDay)
 fileMonthly = 'monthlyResult_'+str(nowYear)+'-'+str(nowMonth)
