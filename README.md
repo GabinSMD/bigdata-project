@@ -34,14 +34,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
+  <!--
   <a href="https://github.com/github_username/repo_name">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">YOUR_TITLE</h3>
+  -->
+  <h3 align="center">Big Data Project</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    Deployement Project
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
