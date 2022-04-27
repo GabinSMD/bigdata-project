@@ -163,72 +163,67 @@ python project_main.py
 
 * project_stock_list.py
 ```sh
-python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME-HOUR]
 ```
-`YEAR` : enter the year wanted, can be `*` for all folder
-
-`WEEK` :  enter the week wanted, can be `*` for all folder
-
-`MONTH-DAY` :  enter the month-day wanted, can be `*` for all folder
-
-`FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
-
 
 * project_stock_infos.py
 ```sh
 python project_stock_infos.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]  --minDate=[DATE] --maxDate=[DATE] --stockName=[NAME]
 ```
+
+* project_stock_history.py
+```sh
+python project_stock_history.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]  --minDate=[DATE] --maxDate=[DATE] --stockName=[NAME]
+```
+
+* project_stock_increase.py
+```sh
+python project_stock_increase.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] 
+```
+
+* project_stock_decrease.py
+```sh
+python project_stock_decrease.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]
+```
+
+* project_stock_evolution.py
+```sh
+python project_stock_evolution.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --pourcentage=[PERCENTAGE] --minDate=[DATE] --maxDate=[DATE]
+```
+
+* project_top_history.py
+```sh
+python project_top_history.py ../outputs/[TOP5] ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --minDate=[DATE] --maxDate=[DATE]
+```
+
+* project_top_date.py
+```sh
+python project_top_date.py ../outputs/[TOP5] ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --searchDate=[DATE]
+```
+
+* project_top_evolution.py
+```sh
+python project_top_evolution.py  ../outputs/[TOP5] ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --minDate=[DATE]--maxDate=[DATE] --pourcentage=[PERCENTAGE]
+```
+
+### Parameters
 `YEAR` : enter the year wanted, can be `*` for all folder
 
 `WEEK` :  enter the week wanted, can be `*` for all folder
 
 `MONTH-DAY` :  enter the month-day wanted, can be `*` for all folder
 
-`FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY` but any part or all part can be replace by `*`
+`FILENAME-HOUR` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
 
-`HOUR` :  enter the hour wanted, can be `*` for all file
+`FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY` but any part or all part can be replace by `*`
 
 `DATE` : enter the date wanted, format `YYYY-mm-dd HH:MM`
 
-`NAME` :
+`NAME` : enter the name of the stock wanted
 
-* project_stock_history.py
-```sh
-python project_stock_history.py ../outputs/*/*/*/dailyResult_* --stockName="`NAME`"
-```
+`PERCENTAGE` : 
 
-* project_stock_increase.py
-```sh
-python project_stock_increase.py ../outputs/*/*/*/dailyResult_* 
-```
-
-* project_stock_decrease.py
-```sh
-python project_stock_decrease.py ../outputs/*/*/*/dailyResult_* 
-```
-
-* project_stock_evolution.py
-```sh
-python project_stock_evolution.py ../outputs/2022/*/*/dailyResult_* --pourcentage=1 --minDate="2022-4-16 9:00" --maxDate="2022-4-26 17:00"
-```
-
-* project_top_history.py
-```sh
-python project_top_history.py ../outputs/todayTOP5 ../outputs/2022/*/*/dailyResult_* --minDate="2022-4-16 9:00" --maxDate="2022-4-26 17:00"
-```
-
-* project_top_date.py
-```sh
-python project_top_date.py ../outputs/todayTOP5 ../outputs/2022/*/*/dailyResult_* --searchDate="2022-4-26 9:00"
-```
-
-* project_top_evolution.py
-```sh
-python project_top_evolution.py  ../outputs/todayTOP5 ../outputs/2022/*/*/dailyResult_* --minDate="2022-4-16 9:00" --maxDate="2022-4-26 17:00" --pourcentage=1
-```
-
-
-
+`TOP5`
 
 
 <!-- CONTRIBUTING -->
