@@ -186,6 +186,7 @@ These scripts use the parameters of the `project_stock_[SCRIPTNAME].py` scripts 
 python project_main.py
 ```
 2. project_stock_list.py
+
 Allows you to group daily or weekly files 
   - Command:
     ```sh
