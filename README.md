@@ -64,8 +64,6 @@
     * [Stock scripts](#stock-scripts)
     * [Top script](#top-scripts)
 * [Contributing](#contributing)
-* [License](#license)
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
