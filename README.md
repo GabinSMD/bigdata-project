@@ -62,6 +62,8 @@
   * [Parameters](#parameters)
   * [Commands](#commands)
     * [Stock scripts](#stock-scripts)
+      * project_stock_list.py
+      * 
     * [Top script](#top-scripts)
 * [Contributing](#contributing)
 * [License](#license)
@@ -181,7 +183,7 @@ These scripts use the parameters of the `project_stock_[SCRIPTNAME].py` scripts 
 
 ### Commands
 #### Stock scripts:
-* project_main.py
+##### * project_main.py
 ```sh
 python project_main.py
 ```
