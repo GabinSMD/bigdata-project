@@ -156,10 +156,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-1. project_main.py
-```sh
-python project_main.py
-```
+
 
 * project_stock_list.py
 
@@ -179,6 +176,10 @@ These scripts use the parameters of the `project_stock_[FILENAME].py` scripts wi
   `TOPFILENAME` : Enter the name to the previously generated Top file, can be `*` for all top files
 
 ### Commands
+1. project_main.py
+```sh
+python project_main.py
+```
   - Command:
     ```sh
     python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
