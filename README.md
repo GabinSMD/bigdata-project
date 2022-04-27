@@ -125,16 +125,13 @@ then add
 <!-- USAGE EXAMPLES -->
 ## Usage
 * project_main.py
-`NAME`, `lastQuote`, `N/A`, `N/A`, `N/A`, `maxSession`, `minSession`, `N/A`, `N/A`, `date`
-`ACCIONA`,`190.900`,`0.10`,`0.20`,`13.56`,`192.000`,`190.100`,`2613`,`10472`,`2022-04-26 09:13`
-
 ```sh
 python project_main.py
 ```
 
 * project_stock_list.py
 ```sh
-python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[DAY]/[FILENAME]
+python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[DAY]/hourlyResult_[FILENAME]
 ```
 `YEAR` : enter the year wanted, can be `*` for all folder
 
@@ -142,15 +139,28 @@ python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[DAY]/[FILENAME]
 
 `DAY` :  enter the day wanted, can be `*` for all folder
 
-`FILENAME` : enter the name of the file, normaly it's hourlyResult_`YEAR`-`WEEK`-`DAY`-`HOUR` but it can be hourlyResult_ and replace the part you want with `*`
+`FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR` but any part or all part can be replace by `*`
 
 `HOUR` :  enter the hour wanted, can be `*` for all file
 
 
 * project_stock_infos.py
 ```sh
-python project_stock_infos.py ../outputs/*/*/*/dailyResult_*  --minDate="`yyyy-mm-dd HH:MM`" --maxDate="`yyyy-mm-dd HH:MM`" --stockName="`NAME`"
+python project_stock_infos.py ../outputs/[YEAR]/[WEEK]/[DAY]/dailyResult_[FILENAME]  --minDate=[DATE] --maxDate=[DATE] --stockName=[NAME]
 ```
+`YEAR` : enter the year wanted, can be `*` for all folder
+
+`WEEK` :  enter the week wanted, can be `*` for all folder
+
+`DAY` :  enter the day wanted, can be `*` for all folder
+
+`FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY` but any part or all part can be replace by `*`
+
+`HOUR` :  enter the hour wanted, can be `*` for all file
+
+`DATE` : enter the date wanted, format `YYYY-mm-dd HH:MM`
+
+`NAME` :
 
 * project_stock_history.py
 ```sh
