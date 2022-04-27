@@ -58,8 +58,8 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [Roadmap](#roadmap)
+* [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
@@ -131,7 +131,6 @@ then add
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
  
 - [x] [Generate a weekly list (for the current week) showing, for each stock, its initial, final, minimum and maximum value for each share.](https://github.com/GabinSMD/bigdata-project/main/project_main.py)
 
@@ -152,6 +151,8 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 - [x] [Given a precise date, show the value of the top 5 stocks at that time.](https://github.com/GabinSMD/bigdata-project/main/project_top_date.py)
 
 - [x] [Given a percentage and a range of dates, show the stock list’s corresponding who have already been in the top 5.](https://github.com/GabinSMD/bigdata-project/main/project_top_evolution.py)
+
+See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
 
 <!-- USAGE EXAMPLES -->
 ## Usage
