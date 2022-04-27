@@ -128,8 +128,45 @@ git clone https://github.com/GabinSMD/bigdata-project.git
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+### project_main.py
+#### Input
+This script is used to create the data files used in the following scripts. This script first launches the scraper.py, this one will recover the data in the following format and write them in the hourly files mainly.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+`NAME`, `lastQuote`, `N/A`, `N/A`, `N/A`, `maxSession`, `minSession`, `N/A`, `N/A`, `date`
+`ACCIONA`,`190.900`,`0.10`,`0.20`,`13.56`,`192.000`,`190.100`,`2613`,`10472`,`2022-04-26 09:13`
+
+`N/A` data is data that we are not interested in processing in the future
+
+python project_main.py
+
+
+### project_stock_list.py
+#### Input
+
+### project_stock_infos.py
+#### Input
+
+### project_stock_history.py
+#### Input
+
+### project_stock_increase.py
+#### Input
+
+### project_stock_decrease.py
+#### Input
+
+### project_stock_evolution.py
+#### Input
+
+### project_top_history.py
+#### Input
+
+### project_top_date.py
+#### Input
+
+### project_top_evolution.py
+#### Input
+
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
