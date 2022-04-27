@@ -118,69 +118,55 @@ git clone https://github.com/GabinSMD/bigdata-project.git
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-### project_main.py
-This script is used to create the data files used in the following scripts. This script first launches the scraper.py, this one will recover the data in the following format and write them in the hourly files mainly.
-
+* project_main.py
 `NAME`, `lastQuote`, `N/A`, `N/A`, `N/A`, `maxSession`, `minSession`, `N/A`, `N/A`, `date`
 `ACCIONA`,`190.900`,`0.10`,`0.20`,`13.56`,`192.000`,`190.100`,`2613`,`10472`,`2022-04-26 09:13`
 
-`N/A` data is data that we are not interested in processing in the future
-
-#### Input
 ```sh
 python project_main.py
 ```
 
-### project_stock_list.py
-#### Input
+* project_stock_list.py
 ```sh
-python project_stock_list.py ../outputs/*/*/*/hourlyResult_* 
+python project_stock_list.py ../outputs/*/*/*/`hourlyResult`_* 
 ```
 
-### project_stock_infos.py
-#### Input
+* project_stock_infos.py
 ```sh
 python project_stock_infos.py ../outputs/*/*/*/dailyResult_*  --minDate="2022-04-21 09:30" --maxDate="2022-04-21 19:40" --stockName="acciona"
 ```
 
-### project_stock_history.py
-#### Input
+* project_stock_history.py
 ```sh
 python project_stock_history.py ../outputs/*/*/*/dailyResult_* --stockName="acciona"
 ```
 
-### project_stock_increase.py
-#### Input
+* project_stock_increase.py
 ```sh
 python project_stock_increase.py ../outputs/*/*/*/dailyResult_* 
 ```
 
-### project_stock_decrease.py
-#### Input
+* project_stock_decrease.py
 ```sh
 python project_stock_decrease.py ../outputs/*/*/*/dailyResult_* 
 ```
 
-### project_stock_evolution.py
-#### Input
+* project_stock_evolution.py
 ```sh
 python project_stock_evolution.py ../outputs/2022/*/*/dailyResult_* --pourcentage=1 --minDate="2022-4-16 9:00" --maxDate="2022-4-26 17:00"
 ```
 
-### project_top_history.py
-#### Input
+* project_top_history.py
 ```sh
 python project_top_history.py ../outputs/todayTOP5 ../outputs/2022/*/*/dailyResult_* --minDate="2022-4-16 9:00" --maxDate="2022-4-26 17:00"
 ```
 
-### project_top_date.py
-#### Input
+* project_top_date.py
 ```sh
 python project_top_date.py ../outputs/todayTOP5 ../outputs/2022/*/*/dailyResult_* --searchDate="2022-4-26 9:00"
 ```
 
-### project_top_evolution.py
-#### Input
+* project_top_evolution.py
 ```sh
 python project_top_evolution.py  ../outputs/todayTOP5 ../outputs/2022/*/*/dailyResult_* --minDate="2022-4-16 9:00" --maxDate="2022-4-26 17:00" --pourcentage=1
 ```
