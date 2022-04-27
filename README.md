@@ -162,18 +162,27 @@ python project_main.py
 ```
 
 * project_stock_list.py
+
+### Parameters
+
+* For `project_stock_[FILENAME].py` scripts:
+  `YEAR` : enter the year wanted, can be `*` for all folder
+
+  `WEEK` :  enter the week wanted, can be `*` for all folders
+
+  `MONTH-DAY` :  enter the month-day wanted, can be `*` for all folders
+
+  `FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
+  
+* For `project_top_[FILENAME].py` scripts:
+These scripts use the parameters of the `project_stock_[FILENAME].py` scripts with the following new parameter:
+  `TOPFILENAME` : Enter the name to the previously generated Top file, can be `*` for all top files
+
+### Commands
   - Command:
     ```sh
     python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
-    `YEAR` : enter the year wanted, can be `*` for all folder
-
-    `WEEK` :  enter the week wanted, can be `*` for all folder
-
-    `MONTH-DAY` :  enter the month-day wanted, can be `*` for all folder
-
-    `FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
- 
    - E.G :
      - Create a file of weekly Value:
        ```sh
