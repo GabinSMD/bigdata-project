@@ -14,6 +14,9 @@ if nowHour ==9:
   
 if nowDay < 10:
   nowDay = "0"+str(nowDay)
+
+if nowMonth < 10:
+  nowMonth = "0"+str(nowMonth)
   
 fileHourly = 'hourlyResult_'+str(nowYear)+'-'+str(nowMonth)+'-'+str(nowDay)+'-'+str(nowHour)+'h'
 fileDaily = 'dailyResult_'+str(nowYear)+'-'+str(nowMonth)+'-'+str(nowDay)
