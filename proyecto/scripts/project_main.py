@@ -54,8 +54,8 @@ if nowHour==18:
   os.system('hdfs dfs -put ../outputs/'+str(nowYear)+'/'+str(nowWeek)+'/'+str(nowMonth)+'-'+str(nowDay)+'/'+fileDaily+' outputs/'+str(nowYear)+'/'+str(nowWeek)+'/'+str(nowMonth)+'-'+str(nowDay))
 
   if now.weekday() == 4 :
-    os.system('python /home/alumno/bigdatapracticas/proyecto/scripts/proyecto_data.py /home/alumno/bigdatapracticas/proyecto/outputs/'+str(nowYear)+'/'+str(nowWeek)+'/*/dailyResult_* > /home/alumno/bigdatapracticas/proyecto/outputs/'+str(nowYear)+'/'+str(nowWeek)+'/'+fileWeekly)
+    os.system('python /home/alumno/bigdatapracticas/proyecto/scripts/project_stock_list.py /home/alumno/bigdatapracticas/proyecto/outputs/'+str(nowYear)+'/'+str(nowWeek)+'/*/dailyResult_* > /home/alumno/bigdatapracticas/proyecto/outputs/'+str(nowYear)+'/'+str(nowWeek)+'/'+fileWeekly)
     os.system('hdfs dfs -put ../outputs/'+str(nowYear)+'/'+str(nowWeek)+'/'+fileWeekly+' outputs/'+str(nowYear)+'/'+str(nowWeek))
     
-    os.system('python /home/alumno/bigdatapracticas/proyecto/scripts/proyecto_data.py /home/alumno/bigdatapracticas/proyecto/outputs/'+str(nowYear)+'/*/'+str(nowMonth)+'-*/dailyResult_* > /home/alumno/bigdatapracticas/proyecto/outputs/'+str(nowYear)+'/'+fileMonthly)
+    os.system('python /home/alumno/bigdatapracticas/proyecto/scripts/project_stock_list.py /home/alumno/bigdatapracticas/proyecto/outputs/'+str(nowYear)+'/*/'+str(nowMonth)+'-*/dailyResult_* > /home/alumno/bigdatapracticas/proyecto/outputs/'+str(nowYear)+'/'+fileMonthly)
     os.system('hdfs dfs -put ../outputs/'+str(nowYear)+'/'+fileMonthly+' outputs/'+str(nowYear))
