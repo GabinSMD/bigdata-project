@@ -81,6 +81,7 @@ Here's a blank template to get started:
 ### Built With
 
 * [Python](https://www.python.org)
+* [Hadoop](https://hadoop.apache.org/)
 
 
 
@@ -113,9 +114,14 @@ cd /home/alumno/bigdatapracticas/
 ```sh
 git clone https://github.com/GabinSMD/bigdata-project.git
 ```
-
-
-
+2. Add the cron execution line
+```sh
+crontab -e
+```
+then add
+```sh
+30 9-18 * * 1-5 /home/alumno/environments/bigdata/bin/python3.6 /home/alumno/bigdatapracticas/proyecto/scripts/proyecto_main.py > /home/alumno/foo.log 2>&1
+```
 <!-- USAGE EXAMPLES -->
 ## Usage
 * project_main.py
