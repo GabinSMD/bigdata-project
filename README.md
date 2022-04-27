@@ -173,6 +173,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
   
 * For `project_top_[FILENAME].py` scripts:
 These scripts use the parameters of the `project_stock_[FILENAME].py` scripts with the following new parameter:
+  
   `TOPFILENAME` : Enter the name to the previously generated Top file, can be `*` for all top files
 
 ### Commands
