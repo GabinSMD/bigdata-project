@@ -119,7 +119,7 @@ git clone https://github.com/GabinSMD/bigdata-project.git
 crontab -e
 ```
 then add
-```sh
+```
 30 9-18 * * 1-5 /home/alumno/environments/bigdata/bin/python3.6 /home/alumno/bigdatapracticas/proyecto/scripts/proyecto_main.py > /home/alumno/foo.log 2>&1
 ```
 <!-- USAGE EXAMPLES -->
