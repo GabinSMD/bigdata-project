@@ -191,13 +191,13 @@ python project_main.py
     python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
    - E.G :
-     - Create a file of weekly Value:
+     - Create a Weekly file of daily values:
        ```sh
-       python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
        ```
-     - Create a file of weekly Value:
+     - Create a Month file of weekly values:
         ```sh
-        python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
         ```
 
 3. project_stock_infos.py
