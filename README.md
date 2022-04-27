@@ -181,13 +181,11 @@ These scripts use the parameters of the `project_stock_[SCRIPTNAME].py` scripts 
   `TOPFILENAME` : Enter the name to the previously generated Top file, can be `*` for all top files
 
 ### Commands
-1. project_main.py
+* project_main.py
 ```sh
 python project_main.py
 ```
-2. project_stock_list.py
-
-Allows you to group daily or weekly files 
+* project_stock_list.py
   - Command:
     ```sh
     python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
