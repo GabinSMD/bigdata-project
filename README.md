@@ -183,7 +183,7 @@ These scripts use the parameters of the `project_stock_[SCRIPTNAME].py` scripts 
 
 ### Commands
 #### Stock scripts:
-##### * project_main.py
+#####* project_main.py
 ```sh
 python project_main.py
 ```
