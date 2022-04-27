@@ -180,9 +180,9 @@ python project_main.py
        python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
        ```
      - Create a file of weekly Value:
-      ```sh
-      python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
-      ```
+        ```sh
+        python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+        ```
 
 3. project_stock_infos.py
 ```sh
