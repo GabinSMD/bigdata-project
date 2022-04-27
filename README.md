@@ -173,7 +173,7 @@ python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult
 
 `FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
  
- - E.G :
+   - E.G :
   
 
 
