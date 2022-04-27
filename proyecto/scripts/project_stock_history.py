@@ -62,7 +62,7 @@ class project_stock_history(MRJob):
         if maxSession > maxMonth:
           maxMonth = maxSession
         totalMonth+=1
-    yield("Stock: "+name,("Minimal hour value: "+str(minHour),"Maximal hour value: "+str(maxHour),"Minmal week value: "+str(minWeek),"Maximal week value: "+str(maxWeek),"Minimal month value: "+str(minMonth),"Maximal month value: "+str(maxMonth)))
+    yield("Stock: "+name,("Minimal hour value: "+str(minHour),"Maximal hour value: "+str(maxHour),"Minimal week value: "+str(minWeek),"Maximal week value: "+str(maxWeek),"Minimal month value: "+str(minMonth),"Maximal month value: "+str(maxMonth)))
 
 if __name__ == '__main__':
   project_stock_history.run()
