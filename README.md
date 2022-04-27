@@ -197,7 +197,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_stock_list.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]
     ```
    - E.G :
      - Create a Weekly file of daily values:
@@ -214,74 +214,55 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
     python project_stock_infos.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]  --minDate=[DATE] --maxDate=[DATE] --stockName=[NAME]
     ```
    - E.G :
-     - Take all daily files and give informations about acciona between 9:30 and 19:40 on 21/04/2022:
+     - Give informations about acciona between 9:30 and 19:40 on 21/04/2022:
        ```sh
        python project_stock_infos.py ../outputs/*/*/*/dailyResult_*  --minDate="2022-04-21 09:30" --maxDate="2022-04-21 19:40" --stockName="acciona"
-
        ```
-     - Take all daily files in the week 17 and give informations about SOLARIA between 2022/04/25 9:30 and 2022/04/29 14:10 :
-        ```sh
-        python project_stock_infos.py ../outputs/*/*/17/dailyResult_*  --minDate="2022-04-21 09:30" --maxDate="2022-04-21 19:40" --stockName="SOLARIA"
-        ```
 
 * project_stock_history.py
   - Command:
     ```sh
-    python project_stock_history.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_history.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]
     ```
    - E.G :
-     - Create a Weekly file of daily values:
+     - Give the minimal and the maximal value of SOLARIA of the last hour, last week and the last month:
        ```sh
-       python project_stock_history.py ../outputs/2022/*/*/dailyResult_* --stockName="acciona"
+       python project_stock_history.py ../outputs/*/*/*/dailyResult_* --stockName="SOLARIA"
        ```
-     - Create a Month file of weekly values:
-        ```sh
-       python project_stock_history.py ../outputs/*/*/*/dailyResult_* --stockName="acciona"
-        ```
 
 * project_stock_increase.py
   - Command:
     ```sh
-    python project_stock_increase.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_increase.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]
     ```
    - E.G :
-     - Create a Weekly file of daily values:
+     - Display the 5 stocks that have risen the most in the last week and month :
        ```sh
-       python project_stock_increase.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_increase.py ../outputs/*/*/*/dailyResult_* 
        ```
-     - Create a Month file of weekly values:
-        ```sh
-        python project_stock_increase.py ../outputs/2022/*/4-*/dailyResult_*
-        ```
+       
 * project_stock_decrease.py
   - Command:
     ```sh
     python project_stock_decrease.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
    - E.G :
-     - Create a Weekly file of daily values:
+     - Display the 5 stocks that have declined the most in the last week and month:
        ```sh
        python project_stock_decrease.py ../outputs/2022/17/*/dailyResult_*
        ```
-     - Create a Month file of weekly values:
-        ```sh
-        python project_stock_decrease.py ../outputs/2022/*/4-*/dailyResult_*
-        ```
         
 * project_stock_evolution.py
   - Command:
     ```sh
-    python project_stock_evolution.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_evolution.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --pourcentage=[PORCENTAGE] --minDate=[DATE] --maxDate=[DATE]
     ```
    - E.G :
-     - Create a Weekly file of daily values:
+     - Takes all files from 2022 and displays the stocks that have increased by that percentage between 21/04/2022 9:30 and 28/04/2022 17:00   :
        ```sh
-       python project_stock_evolution.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_evolution.py ../outputs/2022/*/*/dailyResult_* --pourcentage=1 --minDate="2022-04-21 9:30" --maxDate="2022-04-28 17:00"
        ```
-     - Create a Month file of weekly values:
-        ```sh
-        python project_stock_evolution.py ../outputs/2022/*/4-*/dailyResult_*
-        ```
+       
 #### Top scripts:
 
 * project_top_history.py
@@ -315,12 +296,12 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_top_evolution.py
   - Command:
     ```sh
-    python project_top_evolution.py ../outputs/top/* ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_* --minDate="[DATE]" --maxDate="[DATE]" --pourcentage=[POURCENTAGE]
+    python project_top_evolution.py ../outputs/top/* ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_* --minDate="[DATE]" --maxDate="[DATE]" --pourcentage=[PERCENTAGE]
     ```
    - E.G :
      - Get the stock list’s corresponding who have already been in the top 5 :
        ```sh
-       python project_top_evolution.py  ../outputs/top/* ../outputs/2022/*/*/dailyResult_* --minDate="2022-4-16 9:00" --maxDate="2022-4-26 17:00" --pourcentage=1
+       python project_top_evolution.py  ../outputs/top/* ../outputs/2022/*/*/dailyResult_* --minDate="2022-04-16 9:00" --maxDate="2022-04-26 17:00" --pourcentage=1
 
   
 <!-- CONTRIBUTING -->
