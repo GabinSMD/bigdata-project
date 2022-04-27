@@ -126,17 +126,27 @@ python project_main.py
 
 * project_stock_list.py
 ```sh
-python project_stock_list.py ../outputs/*/*/*/`hourlyResult`_* 
+python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[DAY]/[FILENAME]
 ```
+`YEAR` : enter the year wanted, can be `*` for all folder
+
+`WEEK` :  enter the week wanted, can be `*` for all folder
+
+`DAY` :  enter the day wanted, can be `*` for all folder
+
+`FILENAME` : enter the name of the file, normaly it's hourlyResult_`YEAR`-`WEEK`-`DAY`-`HOUR` but it can be hourlyResult_ and replace the part you want with `*`
+
+`HOUR` :  enter the hour wanted, can be `*` for all file
+
 
 * project_stock_infos.py
 ```sh
-python project_stock_infos.py ../outputs/*/*/*/dailyResult_*  --minDate="2022-04-21 09:30" --maxDate="2022-04-21 19:40" --stockName="acciona"
+python project_stock_infos.py ../outputs/*/*/*/dailyResult_*  --minDate="`yyyy-mm-dd HH:MM`" --maxDate="`yyyy-mm-dd HH:MM`" --stockName="`NAME`"
 ```
 
 * project_stock_history.py
 ```sh
-python project_stock_history.py ../outputs/*/*/*/dailyResult_* --stockName="acciona"
+python project_stock_history.py ../outputs/*/*/*/dailyResult_* --stockName="`NAME`"
 ```
 
 * project_stock_increase.py
