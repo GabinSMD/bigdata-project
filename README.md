@@ -185,6 +185,7 @@ These scripts use the parameters of the `project_stock_[SCRIPTNAME].py` scripts 
 ```sh
 python project_main.py
 ```
+3. project_stock_list.py
   - Command:
     ```sh
     python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
