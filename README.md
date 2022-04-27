@@ -123,6 +123,7 @@ mv proyecto/ ../
 mv README.md ../
 cd ../
 rm -rf bigdata-project
+sudo chown -R alumno proyecto/
 ```
 2. Add the cron execution line
 ```sh
