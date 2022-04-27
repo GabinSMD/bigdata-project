@@ -118,10 +118,10 @@ cd /home/alumno/bigdatapracticas/
 2. Get Project Package
 ```sh
 sudo git clone https://github.com/GabinSMD/bigdata-project.git
-sudo cd bigdata-project
+cd bigdata-project
 sudo mv proyecto/ ../
 sudo mv README.md ../
-sudo cd ../
+cd ../
 sudo rm -rf bigdata-project
 sudo chown -R alumno proyecto/
 ```
