@@ -181,6 +181,8 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
   - For the hourly files: `hourlyResult`_`YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
   - For the daily files: `dailyResult`_`YEAR`-`WEEK`-`DAY` but any part or all part can be replace by `*`
   
+  `PERCENTAGE` : enter the percentage wanted, can be negatif or positif
+  
 * For `project_top_[SCRIPTNAME].py` scripts:
 
 These scripts use the parameters of the `project_stock_[SCRIPTNAME].py` scripts with the following new parameter:
@@ -255,7 +257,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_stock_evolution.py
   - Command:
     ```sh
-    python project_stock_evolution.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --pourcentage=[PORCENTAGE] --minDate=[DATE] --maxDate=[DATE]
+    python project_stock_evolution.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --pourcentage=[PERCENTAGE] --minDate=[DATE] --maxDate=[DATE]
     ```
    - E.G :
      - Takes all files from 2022 and displays the stocks that have increased by that percentage between 21/04/2022 9:30 and 28/04/2022 17:00   :
@@ -268,7 +270,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_top_history.py
   - Command:
     ```sh
-    python project_top_history.py ../outputs/[TOP5] ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --minDate=[DATE] --maxDate=[DATE]
+    python project_top_history.py ../outputs/[TOPFILENAME] ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --minDate=[DATE] --maxDate=[DATE]
     ```
    - E.G :
      - Take the names of the stock in todayTOP5 and display informations of these stock between 16/04/2022 9:00 and 26/04/2022 15:00
@@ -279,7 +281,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_top_date.py
   - Command:
     ```sh
-    python project_top_date.py ../outputs/todayTOP5 ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --searchDate="[DATE]"
+    python project_top_date.py ../outputs/[TOPFILENAME] ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME] --searchDate="[DATE]"
     ```
    - E.G :
      - Get the value of the Top 5 at a precise date:
@@ -290,7 +292,7 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_top_evolution.py
   - Command:
     ```sh
-    python project_top_evolution.py ../outputs/top/[TOP5] ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_* --minDate="[DATE]" --maxDate="[DATE]" --pourcentage=[PERCENTAGE]
+    python project_top_evolution.py ../outputs/top/[TOPFILENAME] ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_* --minDate="[DATE]" --maxDate="[DATE]" --pourcentage=[PERCENTAGE]
     ```
    - E.G :
      - Get the stock list’s corresponding who have already been in the top 5 :
