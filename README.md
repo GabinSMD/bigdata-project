@@ -1,3 +1,4 @@
+<div id="top"></div>
 <!--
 *** Thanks for checking out this README Template. If you have a suggestion that would
 *** make this better, please fork the repo and create a pull request or simply open
@@ -76,6 +77,7 @@ Here's a blank template to get started:
 `github_username`, `repo_name`, `twitter_handle`, `email`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Built With
 
 * [Python](https://www.python.org)
