@@ -104,10 +104,10 @@ sudo pip install selenium
 ```
 * geckodriver
 ```sh
-wget https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz
-tar -xzvf geckodriver-v0.31.0-linux64.tar.gz
-rm geckodriver-v0.31.0-linux64.tar.gz
-mv geckodriver /usr/bin
+sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz
+sudo tar -xzvf geckodriver-v0.31.0-linux64.tar.gz
+sudo rm geckodriver-v0.31.0-linux64.tar.gz
+sudo mv geckodriver /usr/bin
 ```
 ### Installation
 
@@ -117,12 +117,12 @@ cd /home/alumno/bigdatapracticas/
 ```
 2. Get Project Package
 ```sh
-git clone https://github.com/GabinSMD/bigdata-project.git
-cd bigdata-project
-mv proyecto/ ../
-mv README.md ../
-cd ../
-rm -rf bigdata-project
+sudo git clone https://github.com/GabinSMD/bigdata-project.git
+sudo cd bigdata-project
+sudo mv proyecto/ ../
+sudo mv README.md ../
+sudo cd ../
+sudo rm -rf bigdata-project
 sudo chown -R alumno proyecto/
 ```
 2. Add the cron execution line
