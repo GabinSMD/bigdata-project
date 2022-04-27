@@ -70,13 +70,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The aim of this project is to retrieve shares from the stock exchange every hour from Monday (9:30 am) to Friday (6:30 pm).
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`
+The collected data will then be processed according to the [Roadmap](#roadmap)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+This project was realized during the BigData course at the Polytechnic University of Valencia by : 
+
+   `@DionSofiane` | `@Reckzu` | `@GabinSMD`
 
 ### Built With
 
