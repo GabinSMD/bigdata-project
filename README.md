@@ -156,12 +156,12 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* project_main.py
+1. project_main.py
 ```sh
 python project_main.py
 ```
 
-* project_stock_list.py
+2. project_stock_list.py
 ```sh
 python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
 ```
@@ -177,7 +177,7 @@ python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult
   
 
 
-* project_stock_infos.py
+3. project_stock_infos.py
 ```sh
 python project_stock_infos.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_[FILENAME]  --minDate=[DATE] --maxDate=[DATE] --stockName=[NAME]
 ```
