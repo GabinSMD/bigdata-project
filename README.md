@@ -163,6 +163,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 ### Parameters
 
 * For `project_stock_[FILENAME].py` scripts:
+  
   `YEAR` : enter the year wanted, can be `*` for all folder
 
   `WEEK` :  enter the week wanted, can be `*` for all folders
@@ -172,6 +173,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
   `FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
   
 * For `project_top_[FILENAME].py` scripts:
+
 These scripts use the parameters of the `project_stock_[FILENAME].py` scripts with the following new parameter:
   
   `TOPFILENAME` : Enter the name to the previously generated Top file, can be `*` for all top files
