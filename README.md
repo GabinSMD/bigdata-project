@@ -118,6 +118,11 @@ cd /home/alumno/bigdatapracticas/
 2. Get Project Package
 ```sh
 git clone https://github.com/GabinSMD/bigdata-project.git
+cd bigdata-project
+mv proyecto/ ../
+mv README.md ../
+cd ../
+rm -rf bigdata-project
 ```
 2. Add the cron execution line
 ```sh
