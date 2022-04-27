@@ -161,7 +161,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 python project_main.py
 ```
 
-2. project_stock_list.py
+* project_stock_list.py
    - E.G :
 ```sh
 python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
