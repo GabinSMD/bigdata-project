@@ -175,6 +175,14 @@ python project_main.py
     `FILENAME` : enter the name of the file, `YEAR`-`WEEK`-`DAY`-`HOUR`h but any part or all part can be replace by `*`
  
    - E.G :
+     - Create a file of weekly Value:
+       ```sh
+       python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+       ```
+     - Create a file of weekly Value:
+      ```sh
+      python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+      ```
 
 3. project_stock_infos.py
 ```sh
