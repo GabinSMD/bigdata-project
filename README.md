@@ -145,14 +145,16 @@ then add
 - [x] [Display the 5 stocks that have risen the most in the last week and month.](https://github.com/GabinSMD/bigdata-project/main/project_stock_increase.py)
 
 - [x] [Display the 5 stocks that have fallen the most in the last week and month.](https://github.com/GabinSMD/bigdata-project/main/project_stock_decrease.py)
+- [x] Add the optional feature:
+ 
+   - [x] [Given a percentage and a range of dates, show the stocks that have had an increase of this percentage during this period.](https://github.com/GabinSMD/bigdata-project/main/project_stock_evolution.py)
+- [x] Add advanced features:
 
-- [x] [Given a percentage and a range of dates, show the stocks that have had an increase of this percentage during this period.](https://github.com/GabinSMD/bigdata-project/main/project_stock_evolution.py)
+   - [x] [Given a time period, show the variation of the Top 5 stocks over this period.](https://github.com/GabinSMD/bigdata-project/main/project_top_history.py)
 
-- [x] [Given a time period, show the variation of the Top 5 stocks over this period.](https://github.com/GabinSMD/bigdata-project/main/project_top_history.py)
+   - [x] [Given a precise date, show the value of the top 5 stocks at that time.](https://github.com/GabinSMD/bigdata-project/main/project_top_date.py)
 
-- [x] [Given a precise date, show the value of the top 5 stocks at that time.](https://github.com/GabinSMD/bigdata-project/main/project_top_date.py)
-
-- [x] [Given a percentage and a range of dates, show the stock list’s corresponding who have already been in the top 5.](https://github.com/GabinSMD/bigdata-project/main/project_top_evolution.py)
+   - [x] [Given a percentage and a range of dates, show the stock list’s corresponding who have already been in the top 5.](https://github.com/GabinSMD/bigdata-project/main/project_top_evolution.py)
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
 
