@@ -54,6 +54,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Contributors](#contributors)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
