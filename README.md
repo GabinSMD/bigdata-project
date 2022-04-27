@@ -112,9 +112,9 @@ mv geckodriver /usr/local/bin
 ```
 ### Installation
 
-1. Go to Alumno Home
+1. Go to Alumno Home in Big Data Practicas folder
 ```sh
-cd /home/alumno
+cd /home/alumno/bigdatapracticas/
 ```
 2. Get Project Package
 ```sh
