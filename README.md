@@ -106,13 +106,13 @@ npm install npm@latest -g
 
 ### Installation
 
-1. Clone the repo
+1. Go to Alumno Home
 ```sh
-git clone https://github.com/github_username/repo_name.git
+cd /home/alumno
 ```
-2. Install NPM packages
+2. Get Project Package
 ```sh
-npm install
+git clone https://github.com/GabinSMD/bigdata-project.git
 ```
 
 
