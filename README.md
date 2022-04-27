@@ -99,11 +99,17 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* selenium
 ```sh
-npm install npm@latest -g
+sudo pip install selenium
 ```
-
+* geckodriver
+```sh
+wget https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz
+tar -xzvf geckodriver-v0.31.0-linux64.tar.gz
+rm geckodriver-v0.31.0-linux64.tar.gz
+mv geckodriver /usr/local/bin
+```
 ### Installation
 
 1. Go to Alumno Home
