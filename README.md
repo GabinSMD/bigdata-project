@@ -76,7 +76,12 @@ The collected data will then be processed according to the [Roadmap](#roadmap)
 
 This project was realized during the BigData course at the Polytechnic University of Valencia by : 
 
-   `@DionSofiane` | `@Reckzu` | `@GabinSMD`
+
+### Contributors 
+
+<a href="https://github.com/GabinSMD/bigdata-project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GabinSMD/bigdata-project" />
+</a>
 
 ### Built With
 
@@ -226,12 +231,6 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
-### Contributors 
-
-<a href="https://github.com/GabinSMD/bigdata-project/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GabinSMD/bigdata-project" />
-</a>
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
