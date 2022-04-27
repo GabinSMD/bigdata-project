@@ -224,105 +224,102 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
 * project_stock_history.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_history.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
    - E.G :
      - Create a Weekly file of daily values:
        ```sh
-       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_history.py ../outputs/2022/17/*/dailyResult_*
        ```
      - Create a Month file of weekly values:
         ```sh
-        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
+        python project_stock_history.py ../outputs/2022/*/4-*/dailyResult_*
         ```
 
 * project_stock_increase.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_increase.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
    - E.G :
      - Create a Weekly file of daily values:
        ```sh
-       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_increase.py ../outputs/2022/17/*/dailyResult_*
        ```
      - Create a Month file of weekly values:
         ```sh
-        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
+        python project_stock_increase.py ../outputs/2022/*/4-*/dailyResult_*
         ```
 * project_stock_decrease.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_decrease.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
    - E.G :
      - Create a Weekly file of daily values:
        ```sh
-       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_decrease.py ../outputs/2022/17/*/dailyResult_*
        ```
      - Create a Month file of weekly values:
         ```sh
-        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
+        python project_stock_decrease.py ../outputs/2022/*/4-*/dailyResult_*
         ```
         
 * project_stock_evolution.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_stock_evolution.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
    - E.G :
      - Create a Weekly file of daily values:
        ```sh
-       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
+       python project_stock_evolution.py ../outputs/2022/17/*/dailyResult_*
        ```
      - Create a Month file of weekly values:
         ```sh
-        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
+        python project_stock_evolution.py ../outputs/2022/*/4-*/dailyResult_*
         ```
 #### Top scripts:
 
 * project_top_history.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_top_history.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
    - E.G :
      - Create a Weekly file of daily values:
        ```sh
-       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
+       python project_top_history.py ../outputs/2022/17/*/dailyResult_*
        ```
      - Create a Month file of weekly values:
         ```sh
-        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
+        python project_top_history.py ../outputs/2022/*/4-*/dailyResult_*
         ```
 * project_top_date.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_top_date.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
     ```
    - E.G :
      - Create a Weekly file of daily values:
        ```sh
-       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
+       python project_top_date.py ../outputs/2022/17/*/dailyResult_*
        ```
      - Create a Month file of weekly values:
         ```sh
-        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
+        python project_top_date.py ../outputs/2022/*/4-*/dailyResult_*
         ```  
 * project_top_evolution.py
   - Command:
     ```sh
-    python project_stock_list.py ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/hourlyResult_[FILENAME]
+    python project_top_evolution.py ../outputs/top/* ../outputs/[YEAR]/[WEEK]/[MONTH]-[DAY]/dailyResult_* --minDate="[DATE]" --maxDate="[DATE]" --pourcentage=[POURCENTAGE]
     ```
    - E.G :
-     - Create a Weekly file of daily values:
+     - Get the stock list’s corresponding who have already been in the top 5 :
        ```sh
-       python project_stock_list.py ../outputs/2022/17/*/dailyResult_*
-       ```
-     - Create a Month file of weekly values:
-        ```sh
-        python project_stock_list.py ../outputs/2022/*/4-*/dailyResult_*
-        ```
+       python project_top_evolution.py  ../outputs/top/* ../outputs/2022/*/*/dailyResult_* --minDate="2022-4-16 9:00" --maxDate="2022-4-26 17:00" --pourcentage=1
+
+  
 <!-- CONTRIBUTING -->
 ## Contributing
 
