@@ -227,6 +227,13 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- CONTRIBUTING -->
 ## Contributing
 
+###Contributors 
+
+<a href="https://github.com/GabinSMD/bigdata-project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GabinSMD/bigdata-project" />
+</a>
+
+
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
