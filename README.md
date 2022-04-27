@@ -62,8 +62,6 @@
   * [Parameters](#parameters)
   * [Commands](#commands)
     * [Stock scripts](#stock-scripts)
-      * project_stock_list.py
-      * 
     * [Top script](#top-scripts)
 * [Contributing](#contributing)
 * [License](#license)
