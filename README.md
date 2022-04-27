@@ -159,9 +159,6 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-
-* project_stock_list.py
-
 ### Parameters
 
 * For `project_stock_[SCRIPTNAME].py` scripts:
