@@ -27,8 +27,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -343,10 +341,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/GabinSMD/bigdata-project.svg?style=flat-square
 [contributors-url]: https://github.com/GabinSMD/bigdata-project/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/GabinSMD/bigdata-project.svg?style=flat-square
 [forks-url]: https://github.com/GabinSMD/bigdata-project/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/GabinSMD/bigdata-project.svg?style=flat-square
 [stars-url]: https://github.com/GabinSMD/bigdata-project/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/GabinSMD/bigdata-project.svg?style=flat-square
 [issues-url]: https://github.com/GabinSMD/bigdata-project/issues
 
