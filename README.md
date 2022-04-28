@@ -135,8 +135,9 @@ then add
 <!-- ROADMAP -->
 ## Roadmap
 
+- [x][Create main program](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_main.py)
  
-- [x] [Generate a weekly list (for the current week) showing, for each stock, its initial, final, minimum and maximum value for each share.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_main.py)
+- [x] [Generate a weekly list (for the current week) showing, for each stock, its initial, final, minimum and maximum value for each share.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_list.py)
 
 - [x] [Generate a monthly list (for the current month) indicating, for each share, its initial, final, minimum and maximum value for each share](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_list.py)
 
