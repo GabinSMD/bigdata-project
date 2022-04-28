@@ -136,27 +136,27 @@ then add
 ## Roadmap
 
  
-- [x] [Generate a weekly list (for the current week) showing, for each stock, its initial, final, minimum and maximum value for each share.](https://github.com/GabinSMD/bigdata-project/main/project_main.py)
+- [x] [Generate a weekly list (for the current week) showing, for each stock, its initial, final, minimum and maximum value for each share.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_main.py)
 
-- [x] [Generate a monthly list (for the current month) indicating, for each share, its initial, final, minimum and maximum value for each share](https://github.com/GabinSMD/bigdata-project/main/project_stock_list.py)
+- [x] [Generate a monthly list (for the current month) indicating, for each share, its initial, final, minimum and maximum value for each share](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_list.py)
 
-- [x] [Given the name of a stock and a range of dates, obtain its minimum and maximum value of quotation, as well as the percentage decrease and increase from the initial quote value to the minimum and maximum, respectively.](https://github.com/GabinSMD/bigdata-project/main/project_stock_infos.py)
+- [x] [Given the name of a stock and a range of dates, obtain its minimum and maximum value of quotation, as well as the percentage decrease and increase from the initial quote value to the minimum and maximum, respectively.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_infos.py)
 
-- [x] [Given the name of a stock, retrieve its lowest and highest quoted value for the last hour, week and month.](https://github.com/GabinSMD/bigdata-project/main/project_stock_history.py)
+- [x] [Given the name of a stock, retrieve its lowest and highest quoted value for the last hour, week and month.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_history.py)
 
-- [x] [Display the 5 stocks that have risen the most in the last week and month.](https://github.com/GabinSMD/bigdata-project/main/project_stock_increase.py)
+- [x] [Display the 5 stocks that have risen the most in the last week and month.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_increase.py)
 
-- [x] [Display the 5 stocks that have fallen the most in the last week and month.](https://github.com/GabinSMD/bigdata-project/main/project_stock_decrease.py)
+- [x] [Display the 5 stocks that have fallen the most in the last week and month.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_decrease.py)
 - [x] Add the optional feature:
  
-   - [x] [Given a percentage and a range of dates, show the stocks that have had an increase of this percentage during this period.](https://github.com/GabinSMD/bigdata-project/main/project_stock_evolution.py)
+   - [x] [Given a percentage and a range of dates, show the stocks that have had an increase of this percentage during this period.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_evolution.py)
 - [x] Add advanced features:
 
-   - [x] [Given a time period, show the variation of the Top 5 stocks over this period.](https://github.com/GabinSMD/bigdata-project/main/project_top_history.py)
+   - [x] [Given a time period, show the variation of the Top 5 stocks over this period.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_top_history.py)
 
-   - [x] [Given a precise date, show the value of the top 5 stocks at that time.](https://github.com/GabinSMD/bigdata-project/main/project_top_date.py)
+   - [x] [Given a precise date, show the value of the top 5 stocks at that time.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_top_date.py)
 
-   - [x] [Given a percentage and a range of dates, show the stock list’s corresponding who have already been in the top 5.](https://github.com/GabinSMD/bigdata-project/main/project_top_evolution.py)
+   - [x] [Given a percentage and a range of dates, show the stock list’s corresponding who have already been in the top 5.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_top_evolution.py)
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
 
