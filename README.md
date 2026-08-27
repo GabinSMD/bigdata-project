@@ -1,167 +1,188 @@
-<div id="top"></div>
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, repo_name, twitter_handle, email
--->
-
-
-
-
+<a name="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+![Python][python-shield]
 
-
-
-<!-- PROJECT LOGO -->
+<!-- PROJECT HEADER -->
 <br />
-<p align="center">
+<div align="center">
 
-  <h3 align="center">Big Data</h3>
+<h3 align="center">Big Data — IBEX 35 quote pipeline</h3>
 
   <p align="center">
-    Deployement Project    
+    Scrape the Madrid stock exchange every hour, aggregate it with MapReduce jobs,
+    and push the results into HDFS. A deployment project for the Big Data course at
+    the Polytechnic University of Valencia.
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/GabinSMD/bigdata-project/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/GabinSMD/bigdata-project/issues">Request Feature</a>
   </p>
-</p>
-
-
+</div>
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-  * [Contributors](#contributors)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Roadmap](#roadmap)
-* [Usage](#usage)
-  * [Parameters](#parameters)
-  * [Commands](#commands)
-    * [Stock scripts](#stock-scripts)
-    * [Top script](#top-scripts)
-* [Contributing](#contributing)
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#contributors">Contributors</a></li>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#parameters">Parameters</a></li>
+        <li><a href="#commands">Commands</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The aim of this project is to retrieve shares from the stock exchange every hour from Monday (9:30 am) to Friday (6:30 pm).
+The aim of this project is to retrieve shares from the stock exchange every hour, from Monday
+(9:30 am) to Friday (6:30 pm), and to answer questions about them: biggest risers and fallers,
+value ranges over a period, the changing composition of the top 5.
 
-The collected data will then be processed according to the [Roadmap](#roadmap)
+It was built during the Big Data course at the Polytechnic University of Valencia, on the
+teaching cluster — which is why the paths below are absolute and start with `/home/alumno`.
 
-This project was realized during the BigData course at the Polytechnic University of Valencia
+> [!NOTE]
+> **Archived, 2022.** The scraper uses the Selenium 3 API (`find_elements_by_xpath`), removed in
+> Selenium 4, and the quote page it targets has changed since. Expect to fix selectors before this
+> runs again.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Contributors 
+### How it works
+
+```
+expansion.com (IBEX 35)
+      │  scraper.py — headless Firefox via Selenium
+      ▼
+outputs/YYYY/WW/MM-DD/hourlyResult_…     one file per hour, CSV
+      │  project_main.py — run by cron on the half hour
+      ▼
+dailyResult_… → weeklyResult_… → monthlyResult_…   aggregated as the day/week/month closes
+      │  at 18:30 only
+      ▼
+HDFS  outputs/YYYY/WW/MM-DD/…
+```
+
+The ten `project_*.py` scripts are **mrjob** MapReduce jobs run over those files: a mapper splits
+the CSV line, a reducer folds min, max and first/last quotes per stock. `outputs/` in this
+repository still holds the April 2022 run, so the commands below work on real data.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Contributors
 
 <a href="https://github.com/GabinSMD/bigdata-project/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GabinSMD/bigdata-project" />
+  <img src="https://contrib.rocks/image?repo=GabinSMD/bigdata-project" alt="Contributors" />
 </a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-* [Python](https://www.python.org)
-* [Hadoop](https://hadoop.apache.org/)
+* [Python 3.6](https://www.python.org)
+* [mrjob](https://mrjob.readthedocs.io/) — MapReduce jobs in Python
+* [Hadoop / HDFS](https://hadoop.apache.org/)
+* [Selenium](https://www.selenium.dev/) + geckodriver — headless Firefox scraping
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
-
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* selenium
-```sh
-sudo pip install selenium
-```
-* geckodriver
-```sh
-sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz
-sudo tar -xzvf geckodriver-v0.31.0-linux64.tar.gz
-sudo rm geckodriver-v0.31.0-linux64.tar.gz
-sudo mv geckodriver /usr/bin
-```
+* **selenium** and **mrjob**
+  ```sh
+  sudo pip install selenium mrjob
+  ```
+* **geckodriver**
+  ```sh
+  sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz
+  sudo tar -xzvf geckodriver-v0.31.0-linux64.tar.gz
+  sudo rm geckodriver-v0.31.0-linux64.tar.gz
+  sudo mv geckodriver /usr/bin
+  ```
+* A working **HDFS** client, for the 18:30 upload step
+
 ### Installation
 
-1. Go to Alumno Home in Big Data Practicas folder
-```sh
-cd /home/alumno/bigdatapracticas/
-```
-2. Get Project Package
-```sh
-sudo git clone https://github.com/GabinSMD/bigdata-project.git
-cd bigdata-project
-sudo mv proyecto/ ../
-sudo mv README.md ../
-cd ../
-sudo rm -rf bigdata-project
-sudo chown -R alumno proyecto/
-```
-2. Add the cron execution line
-```sh
-crontab -e
-```
-then add
-```
-30 9-18 * * 1-5 /home/alumno/environments/bigdata/bin/python3.6 /home/alumno/bigdatapracticas/proyecto/scripts/project_main.py > /home/alumno/foo.log 2>&1
-```
+1. Go to the Big Data practicas folder in the student's home
+   ```sh
+   cd /home/alumno/bigdatapracticas/
+   ```
+2. Get the project, keeping only `proyecto/` where the scripts expect it
+   ```sh
+   sudo git clone https://github.com/GabinSMD/bigdata-project.git
+   cd bigdata-project
+   sudo mv proyecto/ ../
+   sudo mv README.md ../
+   cd ../
+   sudo rm -rf bigdata-project
+   sudo chown -R alumno proyecto/
+   ```
+3. Add the cron line
+   ```sh
+   crontab -e
+   ```
+   then
+   ```
+   30 9-18 * * 1-5 /home/alumno/environments/bigdata/bin/python3.6 /home/alumno/bigdatapracticas/proyecto/scripts/project_main.py > /home/alumno/foo.log 2>&1
+   ```
+
+The paths are hardcoded in `project_main.py`: moving `proyecto/` elsewhere means editing that file.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] [Create main program](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_main.py)
- 
-- [x] [Generate a weekly list (for the current week) showing, for each stock, its initial, final, minimum and maximum value for each share.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_list.py)
+Everything the assignment asked for is done — the list below is kept as the record of it.
 
-- [x] [Generate a monthly list (for the current month) indicating, for each share, its initial, final, minimum and maximum value for each share](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_list.py)
+- [x] [Main program](proyecto/scripts/project_main.py)
+- [x] [Weekly list: initial, final, minimum and maximum value per share](proyecto/scripts/project_stock_list.py)
+- [x] [Monthly list: same, for the current month](proyecto/scripts/project_stock_list.py)
+- [x] [Given a stock and a date range: min and max quote, plus the percentage fall and rise from the initial value](proyecto/scripts/project_stock_infos.py)
+- [x] [Given a stock: lowest and highest quote over the last hour, week and month](proyecto/scripts/project_stock_history.py)
+- [x] [The 5 stocks that rose the most over the last week and month](proyecto/scripts/project_stock_increase.py)
+- [x] [The 5 stocks that fell the most over the last week and month](proyecto/scripts/project_stock_decrease.py)
+- [x] Optional feature:
+  - [x] [Given a percentage and a date range: the stocks that rose by that much over the period](proyecto/scripts/project_stock_evolution.py)
+- [x] Advanced features:
+  - [x] [Given a period: how the top 5 varied over it](proyecto/scripts/project_top_history.py)
+  - [x] [Given a precise date: the value of the top 5 at that moment](proyecto/scripts/project_top_date.py)
+  - [x] [Given a percentage and a date range: which stocks have already been in the top 5](proyecto/scripts/project_top_evolution.py)
 
-- [x] [Given the name of a stock and a range of dates, obtain its minimum and maximum value of quotation, as well as the percentage decrease and increase from the initial quote value to the minimum and maximum, respectively.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_infos.py)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- [x] [Given the name of a stock, retrieve its lowest and highest quoted value for the last hour, week and month.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_history.py)
-
-- [x] [Display the 5 stocks that have risen the most in the last week and month.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_increase.py)
-
-- [x] [Display the 5 stocks that have fallen the most in the last week and month.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_decrease.py)
-- [x] Add the optional feature:
- 
-   - [x] [Given a percentage and a range of dates, show the stocks that have had an increase of this percentage during this period.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_stock_evolution.py)
-- [x] Add advanced features:
-
-   - [x] [Given a time period, show the variation of the Top 5 stocks over this period.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_top_history.py)
-
-   - [x] [Given a precise date, show the value of the top 5 stocks at that time.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_top_date.py)
-
-   - [x] [Given a percentage and a range of dates, show the stock list’s corresponding who have already been in the top 5.](https://github.com/GabinSMD/bigdata-project/tree/main/proyecto/scripts/project_top_evolution.py)
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
-
-<!-- USAGE EXAMPLES -->
+<!-- USAGE -->
 ## Usage
 
 ### Parameters
@@ -296,29 +317,58 @@ This allows to launch the scrapper, the creation of the daily, weekly and monthl
    - E.G :
      - Get the stock list’s corresponding who have already been in the top 5 :
        ```sh
-       python project_top_evolution.py  ../outputs/top/* ../outputs/2022/*/*/dailyResult_* --minDate="2022-04-16 9:00" --maxDate="2022-04-26 17:00" --pourcentage=1
+       python project_top_evolution.py  ../outputs/top/* ../outputs/2022/*/*/dailyResult_* --minDate="2022-04-16 9:00" --maxDate="2022-04-26 17:00" --pourcentage=1       ```
 
-  
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+A finished course project, archived as-is. If you want to bring it back to life, the two useful
+moves are porting the scraper to the Selenium 4 API and making the paths configurable instead of
+hardcoded.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the project
+2. Create your branch (`git checkout -b feature/selenium-4`)
+3. Commit your changes (`git commit -m 'Port scraper to Selenium 4'`)
+4. Push to the branch and open a pull request
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+No license file: **all rights reserved**. The work is shared between three authors, so it is not
+relicensed unilaterally — ask if you want to reuse it.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Gabin Simond — gabin.simond@simondancebros.org
+
+Project link: [https://github.com/GabinSMD/bigdata-project](https://github.com/GabinSMD/bigdata-project)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Universitat Politècnica de València](https://www.upv.es/) — the Big Data course and its cluster
+* [expansion.com](https://www.expansion.com/mercados/cotizaciones/indices/ibex35_I.IB.html) — the quote source
+* [mrjob](https://mrjob.readthedocs.io/) — MapReduce without the Java
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template) — the shape of this file
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/GabinSMD/bigdata-project.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/GabinSMD/bigdata-project.svg?style=for-the-badge
 [contributors-url]: https://github.com/GabinSMD/bigdata-project/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/GabinSMD/bigdata-project.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/GabinSMD/bigdata-project.svg?style=for-the-badge
 [forks-url]: https://github.com/GabinSMD/bigdata-project/network/members
-[stars-shield]: https://img.shields.io/github/stars/GabinSMD/bigdata-project.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/GabinSMD/bigdata-project.svg?style=for-the-badge
 [stars-url]: https://github.com/GabinSMD/bigdata-project/stargazers
-[issues-shield]: https://img.shields.io/github/issues/GabinSMD/bigdata-project.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/GabinSMD/bigdata-project.svg?style=for-the-badge
 [issues-url]: https://github.com/GabinSMD/bigdata-project/issues
-
+[python-shield]: https://img.shields.io/badge/Python-3.6-3776AB?style=for-the-badge&logo=python&logoColor=white
